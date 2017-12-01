@@ -24,12 +24,17 @@ namespace Exercicio2
                 Console.WriteLine(x.id + " - " + x.nome);
             }
 
-            var key = Console.Read();
-
-            if (listItens.FindAll(c => c.id == key))
+            var key = Console.ReadLine();
+            
+            if (listItens.FindAll(c => c.id == Convert.ToInt32(key)).Count == 0)
+            {
+                Console.WriteLine("Selecione um Item Válido!");
+            }
+            else
             {
                 
             }
+            
         }
 
     }
